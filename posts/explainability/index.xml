@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Explainability on Naigam Shah</title>
+    <link>https://naigamshah.github.io/posts/explainability/</link>
+    <description>Recent content in Explainability on Naigam Shah</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 16 Sep 2021 06:00:20 +0600</lastBuildDate>
+    
+	<atom:link href="https://naigamshah.github.io/posts/explainability/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Explaining Explainability</title>
+      <link>https://naigamshah.github.io/posts/explainability/introduction/</link>
+      <pubDate>Thu, 16 Sep 2021 06:00:20 +0600</pubDate>
+      
+      <guid>https://naigamshah.github.io/posts/explainability/introduction/</guid>
+      <description>1. Importance of Explainability Aritificial Intelligence is slowly becoming an integral part of our routine life. With the advent of extremely high-performance computing devices &amp;amp; increased storage capabilities, AI has seen fast paced growth in the last decade or so. And as predicted by many working in the field, AI will potentially overtake humans in terms of efficiency in less than a decade&amp;rsquo;s time. I personally look at humans and artificially intelligent systems working as a team rather than AI replacing human factor from the job on hand, but it&amp;rsquo;s a topic for another day.</description>
+    </item>
+    
+    <item>
+      <title>LIME</title>
+      <link>https://naigamshah.github.io/posts/explainability/lime/</link>
+      <pubDate>Thu, 16 Sep 2021 06:00:20 +0600</pubDate>
+      
+      <guid>https://naigamshah.github.io/posts/explainability/lime/</guid>
+      <description>LIME is a local interpretability technique that uses a simpler surrogate model like linear regression or decision tree, to explain the original complex target model**. It is a **model agnostic** method, meaning it does not depend on the underlying nature of the target model, and that makes this technique very flexible to accommodate any kind of machine/deep learning architectures. The way LIME works is:
+ The algorithm takes in the local instance which you want to get explanations for.</description>
+    </item>
+    
+    <item>
+      <title>exBERT</title>
+      <link>https://naigamshah.github.io/posts/explainability/exbert/</link>
+      <pubDate>Wed, 15 Sep 2021 06:00:20 +0600</pubDate>
+      
+      <guid>https://naigamshah.github.io/posts/explainability/exbert/</guid>
+      <description>To be Updated </description>
+    </item>
+    
+    <item>
+      <title>SHAP</title>
+      <link>https://naigamshah.github.io/posts/explainability/shap/</link>
+      <pubDate>Wed, 15 Sep 2021 06:00:20 +0600</pubDate>
+      
+      <guid>https://naigamshah.github.io/posts/explainability/shap/</guid>
+      <description>To be Updated </description>
+    </item>
+    
+  </channel>
+</rss>

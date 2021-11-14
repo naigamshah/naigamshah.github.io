@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Explaining Explainability</title>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="../../../css/bootstrap.min.css"/>
+<link rel="stylesheet" href="../../../css/layouts/main.css"/>
+<link rel="stylesheet" href="../../../css/navigators/navbar.css"/>
+<link rel="stylesheet" href="../../../css/plyr.css"/>
+<link rel="stylesheet" href="../../../css/flag-icon.min.css"/>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+
+
+  
+
+  
+  
+  
+    
+  
+  
+
+  <link rel="icon" type="image/png" href="../../../images/logo/logo7_hu3caad16149ca40ba63bd16515237a582_11068_42x0_resize_box_2.png" />
+<meta property="og:title" content="Explaining Explainability" />
+<meta property="og:description" content="Sample post with multiple images, embedded video ect." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://naigamshah.github.io/posts/explainability/introduction/" />
+<meta property="article:published_time" content="2021-09-16T06:00:20+06:00" />
+<meta property="article:modified_time" content="2021-09-16T06:00:20+06:00" />
+
+
+    
+    
+<meta name="description" content="Sample post with multiple images, embedded video ect." />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="../../../css/layouts/single.css"/>
+<link rel="stylesheet" href="../../../css/navigators/sidebar.css">
+
+<link rel="stylesheet" href="../../../css/style.css"/>
+
+
+
+    
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-174931179-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    
+  </head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+  
+  
+    
+  
+  
+
+
+
+  
+  
+    
+  
+  
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="../../../">
+      
+        <img src="../../../images/logo/logo7_hu3caad16149ca40ba63bd16515237a582_11068_42x0_resize_box_2.png" alt="Logo">
+      Naigam Shah</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  
+    <img src="../../../images/logo/logo7_hu3caad16149ca40ba63bd16515237a582_11068_42x0_resize_box_2.png" class="d-none" id="main-logo" alt="Logo">
+  
+  
+    <img src="../../../images/logo/logo7_hu3caad16149ca40ba63bd16515237a582_11068_42x0_resize_box_2.png" class="d-none" id="inverted-logo" alt="Inverted Logo">
+  
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <form class="mx-auto" method="get" action="../../../search">
+          <input type="text" name="keyword" value="" placeholder="Search" data-search="" id="search-box" />
+        </form>
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="../../../posts" data-filter="all">Posts</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="../../../posts/explainability/">Explainability</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li><a class="active" href="../../../posts/explainability/introduction/" title="Introduction">Introduction</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="../../../posts/explainability/lime/" title="LIME">LIME</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="../../../posts/explainability/exbert/" title="exBERT">exBERT</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="../../../posts/explainability/shap/" title="SHAP">SHAP</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="../../../posts/rl/">Reinforcement Learning</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="../../../posts/rl/introduction/" title="Introduction">Introduction</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="../../../posts/projects/" title="Project Overviews">Project Overviews</a></li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://naigamshah.github.io/images/posts/writing-posts/intro-xai.jpg);'>
+      </div>
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          
+        </div>
+
+        <div class="pt-5 title">
+          <p></p>
+          <h1><b>Explaining Explainability</b></h1>
+          <p style="font-family:'Courier New'; font-size:14px">Last Modified: 16 Sep,&#39;21</p>
+        </div>
+
+        <div class="post-content" id="post-content">
+          <h3 id="1-importance-of-explainability">1. Importance of Explainability</h3>
+<p><!-- raw HTML omitted --></p>
+<p>Aritificial Intelligence is slowly becoming an integral part of our routine life. With the advent of extremely high-performance computing devices &amp; increased storage capabilities, AI has seen fast paced growth in the last decade or so. And as predicted by many working in the field, AI will potentially overtake humans in terms of efficiency in less than a decade&rsquo;s time. I personally look at humans and artificially intelligent systems working as a team rather than AI replacing human factor from the job on hand, but it&rsquo;s a topic for another day. So with such increased usage of Machine Learning models(core of AI), explaining them becomes paramount.</p>
+<p>More often than not using Machine Learning models&rsquo; output as the ground truth shouldn&rsquo;t create much of an issue. ML in low-risk environments like image-captioning, movie-recommendations, etc. do not carry any major consequences. But using ML models deployed in high-risk environments like medicine, security, buisness, etc. solely as black-box models can lead to significant repercussions. For example, a medical diagnosis model which diagnoses a patient and recommends appropriate treatment should be transparent in the sense that definite symptoms which lead to the final prediction should be clear. In banking sectors too strict OCC regulations are setup by the goverment to improve transparency and customer satisfaction. Further using performance metrics like accuracy to explain model performance, won&rsquo;t depict the complete picture of real-world tasks. Here is where importance of <strong>Explainability</strong> comes into the play. Explainability or Interpretability as a field aims to explain <strong>&ldquo;why&rdquo;</strong> a model made a certain prediction. Knowing the &lsquo;why&rsquo; can help you better understand the problem at hand, the model &amp; the data used. It will later help you identify the places where a model might fail or can potentially give out predictions which won&rsquo;t have any conceptual backing.</p>
+<hr>
+<h3 id="2-explainability-xai-techniques">2. Explainability (XAI) Techniques</h3>
+<p><!-- raw HTML omitted --></p>
+<p>With the need of including explainability as a part of their pipeline, ML community has been involved in coming up with many novel solutions. Some of these solutions focus on modifying the architecture of model to make it intrinsically interpretable whereas the others take a post-hoc approach which are applied after the model is trained. Feature attributions from logistic regression, decision tree or MRC (Model Reason Code) for XGBoost are some examples of basic post-hoc approaches to explain the model.</p>
+<p>XAI techniques can be broadly classified in two types in terms of their relation with original model:</p>
+<ul>
+<li><strong>Model Specific:</strong> Techniques that dependent on the underlying architecture of the model. Such techniques by nature require a deeper understanding of the underlying architecture of the model so as to maintain the performance of model. Main drawback of such techniques is that they only apply to a class of models and can&rsquo;t be directly extended to models with different architecture. For example:
+<ul>
+<li><strong><a href="https://exbert.net/">exBERT</a> &ndash;</strong> An explainability tool that tries to explain transformer based models by decoding their multi-headed attentions.</li>
+</ul>
+</li>
+</ul>
+<p><!-- raw HTML omitted --></p>
+<ul>
+<li>
+<p><strong>Model Agnostic:</strong> Techniques that are agnostic of the model used. It allows the end-user to plug-in any machine learning model that they want to get explanations for. Normally such techniques require validation data, and target model output as their inputs. You can come across techniques that build a surrogate(explainer) model whose task is to mimic the target(original) model and give out final explanations. And that&rsquo;s why the surrogate model used should be directly human interpretable. Most common human interpretable models are linear regression, ridge regression, decision tree, RuleFit, etc. Hence, main drawback of these techniques is the drop in performance of surrogate model as compared to target model because simpler the model, lower its performance and higher is its interpretability (known as tradeoff of performance vs. interpretability). Also, by definition these techniques cannot have access to the model weights or other structural info which only adds to its complexities.</p>
+<p>Some examples of model agnostic methods are:</p>
+<ul>
+<li><strong><a href="https://arxiv.org/abs/1602.04938">LIME</a> &ndash;</strong> Local surrogate models are trained to approximate the given target model.</li>
+<li><strong><a href="https://homes.cs.washington.edu/~marcotcr/aaai18.pdf">Anchors</a>&ndash;</strong> A rule based explainability technique that explains the prediction with decision rules.</li>
+<li><strong><a href="https://arxiv.org/abs/1705.07874">SHAP</a> &ndash;</strong> Game Theory based explainability technique to approx version of Shapley values.</li>
+<li><strong><a href="https://arxiv.org/abs/1703.01365">Integrated Gradients</a> &ndash;</strong> A technique for deep neural networks which uses the given model&rsquo;s gradients to give out explanations.</li>
+</ul>
+<p>The model agnostic methods are further divided into <strong>Global</strong> and <strong>Local</strong> explainability techniques. Global methods give out feature attributions that impact the model at global level i.e. for a group of predictions. Whereas, local methods give out feature attributions for a single prediction. All the methods listed above are local explainability techniques.</p>
+</li>
+</ul>
+<hr>
+<h3 id="3-evaluation-of-xai-techniques">3. Evaluation of XAI Techniques</h3>
+<p>The real challenge comes when you want to evaluate your explainability technique. Techniques such as SHAP do not add any complexity to the target model because it tries to explain the model, by playing around with the model itself. But methods like LIME that go one step further and build a surrogate model, essentially add another layer of machine learning complexity that can be error prone. So before we look at credibility of our target model credibility of the explanability technique should be established first.</p>
+<p>Currently in the XAI community there is no clarity about how to measure the credibility/performance of our explainability technique. Researchers normally use human based evaluation wherein experts of the use-case are asked to evaluate a batch of the explainer model&rsquo;s attributions and based on that credibility of the technique is decided. Or a function based approach is taken for evaluation to summarize the aggregated local attributions or already available global attributions.</p>
+<hr>
+<p><strong>Updates:</strong>
+<em>No updates as of now</em></p>
+<hr>
+<p>The following articles will essentially be an overview of some of these explainability techniques based on my experience of working with them&hellip;.</p>
+
+        </div>
+
+        
+        
+
+        
+      <hr />
+        
+
+
+
+
+
+
+
+
+
+  
+    
+    
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+<div class="row next-prev-navigator">
+  
+  
+      
+      
+      <div class="col-md-12 next-article">
+        <a href="../../../posts/explainability/lime/" title="LIME" class="btn btn-outline-info">
+          <div>Next <i class="fas fa-chevron-circle-right"></i></div>
+          <div class="next-prev-text">LIME</div>
+        </a>
+      </div>
+    
+</div>
+
+      <hr />
+      
+      
+      </div>
+    </div>
+  </div>
+  
+  <a id="scroll-to-top" class="btn"><i class="fas fa-chevron-circle-up"></i></a>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-importance-of-explainability">1. Importance of Explainability</a></li>
+        <li><a href="#2-explainability-xai-techniques">2. Explainability (XAI) Techniques</a></li>
+        <li><a href="#3-evaluation-of-xai-techniques">3. Evaluation of XAI Techniques</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+    
+
+
+
+
+
+
+
+
+
+  
+      
+  
+
+
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  
+  
+    
+    
+  
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+  
+  
+
+  
+  
+  
+
+  <footer class="container-fluid text-center align-content-center footer pb-2">
+    <div class="text-center">
+      <span style="color: #FFFFFF;font-size:40px;">&#10524;</span>
+      <span style="color: #FFFFFF;font-size:40px;">&#10523;</span>
+    </div>
+    <div class="container pt-5">
+      <div class="row text-left">
+        
+        <div class="col-md-4 col-sm-12">
+          <h5>Navigation</h5>
+          
+          <ul>
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="../../../#about">About Me</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="../../../#recent-posts">Recent Posts</a>
+                </li>
+              
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="../../../#experiences">Experiences</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="../../../#education">Education</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="../../../#projects">Projects</a>
+                </li>
+              
+              
+              
+              
+              
+              
+          </ul>
+          
+        </div>
+        
+        
+        <div class="col-md-4 col-sm-12">
+          <h5>Contact me:</h5>
+          <ul>
+            
+            <li><span>Email: </span> <span>naigamshah07@gmail.com</span></li>
+            
+          </ul>
+        </div>
+        
+        
+        
+      </div>
+    </div>
+    
+    
+    <hr />
+    <div class="container">
+      <div class="row text-center">
+        
+        <div class="col-md-12 text-center">© 2021 Copyright.</div>
+        
+      </div>
+    </div>
+    
+    
+  </footer>
+
+
+    <script type="text/javascript" src="../../../js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="../../../js/popper.min.js"></script>
+<script type="text/javascript" src="../../../js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="../../../js/navbar.js"></script>
+<script type="text/javascript" src="../../../js/plyr.js"></script>
+<script type="text/javascript" src="../../../js/main.js"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="../../../js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+  </body>
+</html>
