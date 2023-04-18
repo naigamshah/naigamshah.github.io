@@ -6,11 +6,7 @@
     <description>Recent content in Explainability on Naigam Shah</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 16 Sep 2021 06:00:20 +0600</lastBuildDate>
-    
-	<atom:link href="https://naigamshah.github.io/posts/explainability/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 16 Sep 2021 06:00:20 +0600</lastBuildDate><atom:link href="https://naigamshah.github.io/posts/explainability/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Explaining Explainability</title>
       <link>https://naigamshah.github.io/posts/explainability/introduction/</link>
@@ -26,8 +22,8 @@
       <pubDate>Thu, 16 Sep 2021 06:00:20 +0600</pubDate>
       
       <guid>https://naigamshah.github.io/posts/explainability/lime/</guid>
-      <description>LIME is a local interpretability technique that uses a simpler surrogate model like linear regression or decision tree, to explain the original complex target model**. It is a **model agnostic** method, meaning it does not depend on the underlying nature of the target model, and that makes this technique very flexible to accommodate any kind of machine/deep learning architectures. The way LIME works is:
- The algorithm takes in the local instance which you want to get explanations for.</description>
+      <description>LIME is a local interpretability technique that uses a simpler surrogate model like linear regression or decision tree, to explain the original complex target model**. It is a model agnostic method, meaning it does not depend on the underlying nature of the target model, and that makes this technique very flexible to accommodate any kind of machine/deep learning architectures. The way LIME works is:
+The algorithm takes in the local instance which you want to get explanations for.</description>
     </item>
     
     <item>

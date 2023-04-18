@@ -5,10 +5,6 @@
     <link>https://naigamshah.github.io/posts/projects/</link>
     <description>Recent content in Project Overviews on Naigam Shah</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://naigamshah.github.io/posts/projects/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="https://naigamshah.github.io/posts/projects/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

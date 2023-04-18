@@ -29,11 +29,11 @@
   
   
 
-  <link rel="icon" type="image/png" href="../../../images/logo/logo7_hu3caad16149ca40ba63bd16515237a582_11068_42x0_resize_box_2.png" />
+  <link rel="icon" type="image/png" href="../../../images/logo/logo7_hu3caad16149ca40ba63bd16515237a582_11068_42x0_resize_box_3.png" />
 <meta property="og:title" content="Explaining Explainability" />
 <meta property="og:description" content="Sample post with multiple images, embedded video ect." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://naigamshah.github.io/posts/explainability/introduction/" />
+<meta property="og:url" content="https://naigamshah.github.io/posts/explainability/introduction/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-09-16T06:00:20+06:00" />
 <meta property="article:modified_time" content="2021-09-16T06:00:20+06:00" />
 
@@ -109,7 +109,7 @@ if (!doNotTrack) {
     </button>
     <a class="navbar-brand" href="../../../">
       
-        <img src="../../../images/logo/logo7_hu3caad16149ca40ba63bd16515237a582_11068_42x0_resize_box_2.png" alt="Logo">
+        <img src="../../../images/logo/logo7_hu3caad16149ca40ba63bd16515237a582_11068_42x0_resize_box_3.png" alt="Logo">
       Naigam Shah</a>
     <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
       <span class="navbar-toggler-icon"></span>
@@ -123,10 +123,10 @@ if (!doNotTrack) {
   </div>
   
   
-    <img src="../../../images/logo/logo7_hu3caad16149ca40ba63bd16515237a582_11068_42x0_resize_box_2.png" class="d-none" id="main-logo" alt="Logo">
+    <img src="../../../images/logo/logo7_hu3caad16149ca40ba63bd16515237a582_11068_42x0_resize_box_3.png" class="d-none" id="main-logo" alt="Logo">
   
   
-    <img src="../../../images/logo/logo7_hu3caad16149ca40ba63bd16515237a582_11068_42x0_resize_box_2.png" class="d-none" id="inverted-logo" alt="Inverted Logo">
+    <img src="../../../images/logo/logo7_hu3caad16149ca40ba63bd16515237a582_11068_42x0_resize_box_3.png" class="d-none" id="inverted-logo" alt="Inverted Logo">
   
 </nav>
 
@@ -269,12 +269,12 @@ if (!doNotTrack) {
 
         <div class="post-content" id="post-content">
           <h3 id="1-importance-of-explainability">1. Importance of Explainability</h3>
-<p><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
 <p>Aritificial Intelligence is slowly becoming an integral part of our routine life. With the advent of extremely high-performance computing devices &amp; increased storage capabilities, AI has seen fast paced growth in the last decade or so. And as predicted by many working in the field, AI will potentially overtake humans in terms of efficiency in less than a decade&rsquo;s time. I personally look at humans and artificially intelligent systems working as a team rather than AI replacing human factor from the job on hand, but it&rsquo;s a topic for another day. So with such increased usage of Machine Learning models(core of AI), explaining them becomes paramount.</p>
 <p>More often than not using Machine Learning models&rsquo; output as the ground truth shouldn&rsquo;t create much of an issue. ML in low-risk environments like image-captioning, movie-recommendations, etc. do not carry any major consequences. But using ML models deployed in high-risk environments like medicine, security, buisness, etc. solely as black-box models can lead to significant repercussions. For example, a medical diagnosis model which diagnoses a patient and recommends appropriate treatment should be transparent in the sense that definite symptoms which lead to the final prediction should be clear. In banking sectors too strict OCC regulations are setup by the goverment to improve transparency and customer satisfaction. Further using performance metrics like accuracy to explain model performance, won&rsquo;t depict the complete picture of real-world tasks. Here is where importance of <strong>Explainability</strong> comes into the play. Explainability or Interpretability as a field aims to explain <strong>&ldquo;why&rdquo;</strong> a model made a certain prediction. Knowing the &lsquo;why&rsquo; can help you better understand the problem at hand, the model &amp; the data used. It will later help you identify the places where a model might fail or can potentially give out predictions which won&rsquo;t have any conceptual backing.</p>
 <hr>
 <h3 id="2-explainability-xai-techniques">2. Explainability (XAI) Techniques</h3>
-<p><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
 <p>With the need of including explainability as a part of their pipeline, ML community has been involved in coming up with many novel solutions. Some of these solutions focus on modifying the architecture of model to make it intrinsically interpretable whereas the others take a post-hoc approach which are applied after the model is trained. Feature attributions from logistic regression, decision tree or MRC (Model Reason Code) for XGBoost are some examples of basic post-hoc approaches to explain the model.</p>
 <p>XAI techniques can be broadly classified in two types in terms of their relation with original model:</p>
 <ul>
@@ -284,20 +284,15 @@ if (!doNotTrack) {
 </ul>
 </li>
 </ul>
-<p><!-- raw HTML omitted --></p>
-<ul>
-<li>
-<p><strong>Model Agnostic:</strong> Techniques that are agnostic of the model used. It allows the end-user to plug-in any machine learning model that they want to get explanations for. Normally such techniques require validation data, and target model output as their inputs. You can come across techniques that build a surrogate(explainer) model whose task is to mimic the target(original) model and give out final explanations. And that&rsquo;s why the surrogate model used should be directly human interpretable. Most common human interpretable models are linear regression, ridge regression, decision tree, RuleFit, etc. Hence, main drawback of these techniques is the drop in performance of surrogate model as compared to target model because simpler the model, lower its performance and higher is its interpretability (known as tradeoff of performance vs. interpretability). Also, by definition these techniques cannot have access to the model weights or other structural info which only adds to its complexities.</p>
-<p>Some examples of model agnostic methods are:</p>
-<ul>
-<li><strong><a href="https://arxiv.org/abs/1602.04938">LIME</a> &ndash;</strong> Local surrogate models are trained to approximate the given target model.</li>
-<li><strong><a href="https://homes.cs.washington.edu/~marcotcr/aaai18.pdf">Anchors</a>&ndash;</strong> A rule based explainability technique that explains the prediction with decision rules.</li>
-<li><strong><a href="https://arxiv.org/abs/1705.07874">SHAP</a> &ndash;</strong> Game Theory based explainability technique to approx version of Shapley values.</li>
-<li><strong><a href="https://arxiv.org/abs/1703.01365">Integrated Gradients</a> &ndash;</strong> A technique for deep neural networks which uses the given model&rsquo;s gradients to give out explanations.</li>
-</ul>
-<p>The model agnostic methods are further divided into <strong>Global</strong> and <strong>Local</strong> explainability techniques. Global methods give out feature attributions that impact the model at global level i.e. for a group of predictions. Whereas, local methods give out feature attributions for a single prediction. All the methods listed above are local explainability techniques.</p>
-</li>
-</ul>
+<!-- raw HTML omitted -->
+<pre><code>Some examples of model agnostic methods are:
+- **[LIME](https://arxiv.org/abs/1602.04938) --** Local surrogate models are trained to approximate the given target model.
+- **[Anchors](https://homes.cs.washington.edu/~marcotcr/aaai18.pdf)--** A rule based explainability technique that explains the prediction with decision rules.
+- **[SHAP](https://arxiv.org/abs/1705.07874) --** Game Theory based explainability technique to approx version of Shapley values.
+- **[Integrated Gradients](https://arxiv.org/abs/1703.01365) --** A technique for deep neural networks which uses the given model's gradients to give out explanations.	 
+
+The model agnostic methods are further divided into **Global** and **Local** explainability techniques. Global methods give out feature attributions that impact the model at global level i.e. for a group of predictions. Whereas, local methods give out feature attributions for a single prediction. All the methods listed above are local explainability techniques.
+</code></pre>
 <hr>
 <h3 id="3-evaluation-of-xai-techniques">3. Evaluation of XAI Techniques</h3>
 <p>The real challenge comes when you want to evaluate your explainability technique. Techniques such as SHAP do not add any complexity to the target model because it tries to explain the model, by playing around with the model itself. But methods like LIME that go one step further and build a surrogate model, essentially add another layer of machine learning complexity that can be error prone. So before we look at credibility of our target model credibility of the explanability technique should be established first.</p>
@@ -524,7 +519,7 @@ if (!doNotTrack) {
           <h5>Contact me:</h5>
           <ul>
             
-            <li><span>Email: </span> <span>naigamshah07@gmail.com</span></li>
+            <li><span>Email: </span> <span>n7shah@ucsd.edu</span></li>
             
           </ul>
         </div>
