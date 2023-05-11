@@ -34,8 +34,8 @@
 <meta property="og:description" content="Sample post with multiple images, embedded video ect." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://naigamshah.github.io/posts/explainability/introduction/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-09-16T06:00:20+06:00" />
-<meta property="article:modified_time" content="2021-09-16T06:00:20+06:00" />
+<meta property="article:published_time" content="2023-05-11T06:00:20+06:00" />
+<meta property="article:modified_time" content="2023-05-11T06:00:20+06:00" />
 
 
     
@@ -264,7 +264,7 @@ if (!doNotTrack) {
         <div class="pt-5 title">
           <p></p>
           <h1><b>Explaining Explainability</b></h1>
-          <p style="font-family:'Courier New'; font-size:14px">Last Modified: 16 Sep,&#39;21</p>
+          <p style="font-family:'Courier New'; font-size:14px">Last Modified: 11 May,&#39;23</p>
         </div>
 
         <div class="post-content" id="post-content">
@@ -273,7 +273,17 @@ if (!doNotTrack) {
 <p>Aritificial Intelligence is slowly becoming an integral part of our routine life. With the advent of extremely high-performance computing devices &amp; increased storage capabilities, AI has seen fast paced growth in the last decade or so. And as predicted by many working in the field, AI will potentially overtake humans in terms of efficiency in less than a decade&rsquo;s time. I personally look at humans and artificially intelligent systems working as a team rather than AI replacing human factor from the job on hand, but it&rsquo;s a topic for another day. So with such increased usage of Machine Learning models(core of AI), explaining them becomes paramount.</p>
 <p>More often than not using Machine Learning models&rsquo; output as the ground truth shouldn&rsquo;t create much of an issue. ML in low-risk environments like image-captioning, movie-recommendations, etc. do not carry any major consequences. But using ML models deployed in high-risk environments like medicine, security, buisness, etc. solely as black-box models can lead to significant repercussions. For example, a medical diagnosis model which diagnoses a patient and recommends appropriate treatment should be transparent in the sense that definite symptoms which lead to the final prediction should be clear. In banking sectors too strict OCC regulations are setup by the goverment to improve transparency and customer satisfaction. Further using performance metrics like accuracy to explain model performance, won&rsquo;t depict the complete picture of real-world tasks. Here is where importance of <strong>Explainability</strong> comes into the play. Explainability or Interpretability as a field aims to explain <strong>&ldquo;why&rdquo;</strong> a model made a certain prediction. Knowing the &lsquo;why&rsquo; can help you better understand the problem at hand, the model &amp; the data used. It will later help you identify the places where a model might fail or can potentially give out predictions which won&rsquo;t have any conceptual backing.</p>
 <hr>
-<h3 id="2-explainability-xai-techniques">2. Explainability (XAI) Techniques</h3>
+<h3 id="2-why-exactly-do-we-require-explainability-formal-explanation">2. Why exactly do we require explainability? (Formal explanation)</h3>
+<ul>
+<li><strong>Trust</strong>: Seeing models behave human-like, we might be more likely to trust
+them and deploy them.</li>
+<li><strong>Causality</strong>: If classifier predicts class y because of input feature x, does that tell us
+that x causes y? Not necessarily, but helpful to know</li>
+<li><strong>Informativeness</strong>: e.g., predicting a disease diagnosis isn&rsquo;t that useful without knowing
+more about the patient</li>
+<li><strong>Fairness</strong>: Ensure that predictions are non-discriminatory</li>
+</ul>
+<h3 id="3-explainability-xai-techniques">3. Explainability (XAI) Techniques</h3>
 <!-- raw HTML omitted -->
 <p>With the need of including explainability as a part of their pipeline, ML community has been involved in coming up with many novel solutions. Some of these solutions focus on modifying the architecture of model to make it intrinsically interpretable whereas the others take a post-hoc approach which are applied after the model is trained. Feature attributions from logistic regression, decision tree or MRC (Model Reason Code) for XGBoost are some examples of basic post-hoc approaches to explain the model.</p>
 <p>XAI techniques can be broadly classified in two types in terms of their relation with original model:</p>
@@ -294,7 +304,7 @@ if (!doNotTrack) {
 The model agnostic methods are further divided into **Global** and **Local** explainability techniques. Global methods give out feature attributions that impact the model at global level i.e. for a group of predictions. Whereas, local methods give out feature attributions for a single prediction. All the methods listed above are local explainability techniques.
 </code></pre>
 <hr>
-<h3 id="3-evaluation-of-xai-techniques">3. Evaluation of XAI Techniques</h3>
+<h3 id="4-evaluation-of-xai-techniques">4. Evaluation of XAI Techniques</h3>
 <p>The real challenge comes when you want to evaluate your explainability technique. Techniques such as SHAP do not add any complexity to the target model because it tries to explain the model, by playing around with the model itself. But methods like LIME that go one step further and build a surrogate model, essentially add another layer of machine learning complexity that can be error prone. So before we look at credibility of our target model credibility of the explanability technique should be established first.</p>
 <p>Currently in the XAI community there is no clarity about how to measure the credibility/performance of our explainability technique. Researchers normally use human based evaluation wherein experts of the use-case are asked to evaluate a batch of the explainer model&rsquo;s attributions and based on that credibility of the technique is decided. Or a function based approach is taken for evaluation to summarize the aggregated local attributions or already available global attributions.</p>
 <hr>
@@ -381,8 +391,9 @@ The model agnostic methods are further divided into **Global** and **Local** exp
     <li>
       <ul>
         <li><a href="#1-importance-of-explainability">1. Importance of Explainability</a></li>
-        <li><a href="#2-explainability-xai-techniques">2. Explainability (XAI) Techniques</a></li>
-        <li><a href="#3-evaluation-of-xai-techniques">3. Evaluation of XAI Techniques</a></li>
+        <li><a href="#2-why-exactly-do-we-require-explainability-formal-explanation">2. Why exactly do we require explainability? (Formal explanation)</a></li>
+        <li><a href="#3-explainability-xai-techniques">3. Explainability (XAI) Techniques</a></li>
+        <li><a href="#4-evaluation-of-xai-techniques">4. Evaluation of XAI Techniques</a></li>
       </ul>
     </li>
   </ul>
@@ -469,6 +480,7 @@ The model agnostic methods are further divided into **Global** and **Local** exp
                 </li>
               
               
+              
                 
                 
                   
@@ -476,7 +488,6 @@ The model agnostic methods are further divided into **Global** and **Local** exp
                 <li class="nav-item">
                   <a class="smooth-scroll" href="../../../#recent-posts">Recent Posts</a>
                 </li>
-              
               
               
                 
